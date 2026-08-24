@@ -5,6 +5,7 @@ import com.kalyan.order_service.dto.OrderRequest;
 import com.kalyan.order_service.model.Order;
 import com.kalyan.order_service.model.OrderLineItems;
 import com.kalyan.order_service.repository.OrderRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,7 @@ import java.util.UUID;
 @Service
 @RequiredArgsConstructor
 @Slf4j
+@Transactional
 public class OrderService {
 
     private final OrderRepository orderRepository;
